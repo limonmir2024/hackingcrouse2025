@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হ্যাকিং মাস্টার - প্রফেশনাল হ্যাকিং কোর্স</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tiro Bangla', serif;
+        }
+        
+        :root {
+            --primary: #0d1117;
+            --secondary: #161b22;
+            --accent: #238636;
+            --highlight: #3fb950;
+            --text: #f0f6fc;
+            --card: #21262d;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary), #000);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(22, 27, 34, 0.9);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--highlight), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--highlight);
+            font-size: 2.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--highlight);
+            background: rgba(63, 185, 80, 0.1);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent), var(--highlight));
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(63, 185, 80, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(63, 185, 80, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23161b22" fill-opacity="0.3" d="M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,138.7C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom no-repeat, linear-gradient(135deg, var(--secondary), var(--primary));
+            background-size: 100% 150px, cover;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%233fb950' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,170.7C384,181,480,171,576,165.3C672,160,768,160,864,138.7C960,117,1056,75,1152,69.3C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--text), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin: 0 auto 2.5rem;
+            max-width: 700px;
+            animation: fadeInUp 1.2s ease;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            animation: fadeInUp 1.4s ease;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--highlight);
+            color: var(--highlight);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(63, 185, 80, 0.1);
+        }
+        
+        /* Animated elements */
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.2;
+            color: var(--highlight);
+        }
+        
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation: float 12s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(3) {
+            top: 40%;
+            left: 75%;
+            animation: float 18s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(4) {
+            top: 70%;
+            left: 15%;
+            animation: float 14s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(5) {
+            top: 30%;
+            left: 50%;
+            animation: float 16s ease-in-out infinite;
+        }
+        
+        /* Courses Section */
+        .courses {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+            animation: underline 2s infinite;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .course-card {
+            background: var(--card);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .course-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(63, 185, 80, 0.2);
+        }
+        
+        .course-img {
+            height: 180px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%233fb950' fill-opacity='0.1' d='M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,138.7C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+        }
+        
+        .course-content {
+            padding: 2rem;
+        }
+        
+        .course-content h3 {
+            margin-bottom: 1rem;
+            color: var(--highlight);
+            font-size: 1.5rem;
+        }
+        
+        .course-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            color: var(--highlight);
+        }
+        
+        /* Payment Section */
+        .payment {
+            padding: 6rem 0;
+            background: var(--secondary);
+            position: relative;
+        }
+        
+        .payment::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230d1117' fill-opacity='0.2' d='M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,138.7C960,139,1056,181,1152,192C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            opacity: 0.5;
+        }
+        
+        .payment-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .payment-method {
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        .payment-method.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .payment-method:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(63, 185, 80, 0.2);
+        }
+        
+        .payment-method i {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--highlight);
+        }
+        
+        .payment-method h3 {
+            margin-bottom: 1.5rem;
+            color: var(--highlight);
+        }
+        
+        .payment-number {
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: var(--primary);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-family: monospace;
+            letter-spacing: 1px;
+            color: var(--highlight);
+            border: 1px solid var(--accent);
+        }
+        
+        /* Login Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: var(--secondary);
+            padding: 3rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            animation: modalFadeIn 0.5s ease;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--highlight);
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #ff2e4d;
+        }
+        
+        .form-toggle {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--accent);
+        }
+        
+        .form-toggle-btn {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-toggle-btn.active {
+            border-bottom: 3px solid var(--highlight);
+            color: var(--highlight);
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            color: var(--highlight);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            background-color: var(--primary);
+            color: var(--text);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--highlight);
+            box-shadow: 0 0 0 2px rgba(63, 185, 80, 0.3);
+        }
+        
+        /* User Panel */
+        .user-panel {
+            padding: 6rem 0;
+            display: none;
+        }
+        
+        .user-info {
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        .user-info h3 {
+            color: var(--highlight);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .user-info p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            padding: 6rem 0;
+            display: none;
+        }
+        
+        .admin-form {
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: var(--card);
+            border-radius: 50%;
+            color: var(--text);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--highlight);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+        
+        @keyframes underline {
+            0% {
+                transform: scaleX(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scaleX(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scaleX(0);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .payment-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .modal-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-lock"></i>
+                    হ্যাকিং মাস্টার
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">হোম</a></li>
+                    <li><a href="#courses">কোর্সসমূহ</a></li>
+                    <li><a href="#payment">পেমেন্ট</a></li>
+                    <li><a href="#" id="admin-link">অ্যাডমিন</a></li>
+                    <li><a href="#" id="user-link">ইউজার প্যানেল</a></li>
+                    <li><a href="#contact">যোগাযোগ</a></li>
+                </ul>
+                <a href="#" class="btn" id="login-btn" onclick="showLoginModal()">লগইন</a>
+                <a href="#" class="btn" id="logout-btn" style="display: none;" onclick="logout()">লগআউট</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-icons">
+            <div class="floating-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="floating-icon"><i class="fas fa-code"></i></div>
+            <div class="floating-icon"><i class="fas fa-lock"></i></div>
+            <div class="floating-icon"><i class="fas fa-user-secret"></i></div>
+            <div class="floating-icon"><i class="fas fa-key"></i></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>পেশাদার হ্যাকিং কোর্সে স্বাগতম</h1>
+                <p>আমাদের বিশেষায়িত কোর্সের মাধ্যমে হ্যাকিং শেখার জন্য প্রস্তুত হোন। শিখুন বিশ্বস্ত Instructors এর কাছ থেকে এবং হয়ে উঠুন সাইবার সিকিউরিটি এক্সপার্ট।</p>
+                <div class="hero-btns">
+                    <a href="#courses" class="btn">কোর্স এক্সপ্লোর করুন</a>
+                    <a href="#payment" class="btn btn-secondary">পেমেন্ট করুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">আমাদের কোর্সসমূহ</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>গেলারী হ্যাক</h3>
+                        <p>মোবাইল গ্যালারী হ্যাকিং শিখুন সহজ পদ্ধতিতে। step by step গাইডলাইন সহ সম্পূর্ণ কোর্স।</p>
+                        <div class="course-price">550 টাকা</div>
+                        <a href="#payment" class="btn">এনরোল করুন</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>ডিভাইস ফুল কন্ট্রল</h3>
+                        <p>রিমোট ডিভাইস কন্ট্রোল শিখুন। কোনো ডিভাইসে এক্সেস নিন এবং পুরোপুরি কন্ট্রোল করুন।</p>
+                        <div class="course-price">1020 টাকা</div>
+                        <a href="#payment" class="btn">এনরোল করুন</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>ফেসবুক হ্যাক</h3>
+                        <p>ফেসবুক অ্যাকাউন্ট হ্যাকিং এর কার্যকরী পদ্ধতি শিখুন। বিস্তারিত গাইডলাইন সহ।</p>
+                        <div class="course-price">670 টাকা</div>
+                        <a href="#payment" class="btn">এনরোল করুন</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>লিংক পাঠিয়ে ফুন হ্যাক</h3>
+                        <p>লিংক পাঠিয়ে সহজেই টার্গেট ডিভাইস হ্যাক করার পদ্ধতি শিখুন।</p>
+                        <div class="course-price">1250 টাকা</div>
+                        <a href="#payment" class="btn">এনরোল করুন</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Pdf ভাইরাস তৈরি</h3>
+                        <p>Pdf ফাইল এর মাধ্যমে ভাইরাস তৈরি এবং ডিস্ট্রিবিউট করার পদ্ধতি শিখুন।</p>
+                        <div class="course-price">720 টাকা</div>
+                        <a href="#payment" class="btn">এনরোল করুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment" id="payment">
+        <div class="container">
+            <h2 class="section-title">পেমেন্ট মাধ্যম</h2>
+            <div class="payment-content">
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.2rem;">কোর্সে এনরোল করতে নিচের যেকোনো একটি মাধ্যম through পেমেন্ট করুন এবং রসিদটি আমাদের পাঠান।</p>
+                
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>বিকাশ</h3>
+                        <div class="payment-number">01932566013</div>
+                        <p>পেমেন্ট এর পর রসিদটি আমাদের ইমেইল বা WhatsApp এ পাঠান</p>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>নগদ</h3>
+                        <div class="payment-number">01932566013</div>
+                        <p>পেমেন্ট এর পর রসিদটি আমাদের ইমেইল বা WhatsApp এ পাঠান</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Panel -->
+    <section class="user-panel" id="user-panel">
+        <div class="container">
+            <h2 class="section-title">ইউজার প্যানেল</h2>
+            
+            <div class="user-info">
+                <h3 id="user-name">ইউজারের নাম</h3>
+                <p id="user-email">ইউজারের ইমেইল</p>
+                <p id="user-joined">জয়েন করার তারিখ: </p>
+            </div>
+            
+            <div class="admin-form">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">আমার কোর্সসমূহ</h3>
+                <div id="user-courses">
+                    <p>আপনি এখনও কোনো কোর্সে এনরোল করেননি।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section class="admin-panel" id="admin-panel">
+        <div class="container">
+            <h2 class="section-title">অ্যাডমিন প্যানেল</h2>
+            
+            <div class="admin-form">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">কোর্স ম্যানেজমেন্ট</h3>
+                
+                <div class="form-group">
+                    <label for="course-title">কোর্সের শিরোনাম</label>
+                    <input type="text" id="course-title" placeholder="কোর্সের নাম লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="course-price">কোর্সের মূল্য (টাকায়)</label>
+                    <input type="number" id="course-price" placeholder="কোর্সের মূল্য লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="course-description">কোর্সের বিবরণ</label>
+                    <textarea id="course-description" rows="4" placeholder="কোর্সের বিস্তারিত বিবরণ লিখুন"></textarea>
+                </div>
+                
+                <button class="btn" style="width: 100%;">কোর্স যোগ করুন</button>
+            </div>
+            
+            <div class="admin-form" style="margin-top: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">পেমেন্ট Verification</h3>
+                
+                <div class="form-group">
+                    <label for="payment-number">ট্রানজেকশন আইডি</label>
+                    <input type="text" id="payment-number" placeholder="ট্রানজেকশন আইডি লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-email">ব্যবহারকারীর ইমেইল</label>
+                    <input type="email" id="user-email" placeholder="ইমেইল এড্রেস লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="course-select">কোর্স নির্বাচন করুন</label>
+                    <select id="course-select">
+                        <option value="">কোর্স নির্বাচন করুন</option>
+                        <option value="gallery">গেলারী হ্যাক (550 টাকা)</option>
+                        <option value="device">ডিভাইস ফুল কন্ট্রল (1020 টাকা)</option>
+                        <option value="facebook">ফেসবুক হ্যাক (670 টাকা)</option>
+                        <option value="link">লিংক পাঠিয়ে ফুন হ্যাক (1250 টাকা)</option>
+                        <option value="pdf">Pdf ভাইরাস তৈরি (720 টাকা)</option>
+                    </select>
+                </div>
+                
+                <button class="btn" style="width: 100%;">পেমেন্ট Verify করুন</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+            
+            <div class="form-toggle">
+                <button class="form-toggle-btn active" id="login-toggle">লগইন</button>
+                <button class="form-toggle-btn" id="register-toggle">রেজিস্টার</button>
+            </div>
+            
+            <div id="login-form">
+                <div class="form-group">
+                    <label for="login-email">ইমেইল</label>
+                    <input type="email" id="login-email" placeholder="আপনার ইমেইল লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">পাসওয়ার্ড</label>
+                    <input type="password" id="login-password" placeholder="আপনার পাসওয়ার্ড লিখুন">
+                </div>
+                
+                <button class="btn" style="width: 100%;" onclick="login()">লগইন</button>
+            </div>
+            
+            <div id="register-form" style="display: none;">
+                <div class="form-group">
+                    <label for="register-name">নাম</label>
+                    <input type="text" id="register-name" placeholder="আপনার পুরো নাম লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email">ইমেইল</label>
+                    <input type="email" id="register-email" placeholder="আপনার ইমেইল লিখুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password">পাসওয়ার্ড</label>
+                    <input type="password" id="register-password" placeholder="পাসওয়ার্ড তৈরি করুন">
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm-password">পাসওয়ার্ড নিশ্চিত করুন</label>
+                    <input type="password" id="register-confirm-password" placeholder="পাসওয়ার্ডটি আবার লিখুন">
+                </div>
+                
+                <button class="btn" style="width: 100%;" onclick="register()">রেজিস্টার</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>ইমেইল: admin@hackingmaster.com | WhatsApp: 01932566013</p>
+                    <p>কপিরাইট © ২০২৩ হ্যাকিং মাস্টার। সকল права সংরক্ষিত।</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // User data and authentication
+        let currentUser = null;
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const adminEmail = 'admin@hackingmaster.com';
+        
+        // Check if user is logged in on page load
+        window.onload = function() {
+            const loggedInUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (loggedInUser) {
+                currentUser = loggedInUser;
+                updateUIAfterLogin();
+            }
+            
+            // Add event listeners
+            document.getElementById('login-toggle').addEventListener('click', function() {
+                this.classList.add('active');
+                document.getElementById('register-toggle').classList.remove('active');
+                document.getElementById('login-form').style.display = 'block';
+                document.getElementById('register-form').style.display = 'none';
+            });
+            
+            document.getElementById('register-toggle').addEventListener('click', function() {
+                this.classList.add('active');
+                document.getElementById('login-toggle').classList.remove('active');
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('register-form').style.display = 'block';
+            });
+            
+            document.getElementById('admin-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                showAdminPanel();
+            });
+            
+            document.getElementById('user-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                showUserPanel();
+            });
+            
+            // Animation on scroll
+            const courseCards = document.querySelectorAll('.course-card');
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            courseCards.forEach(card => {
+                observer.observe(card);
+            });
+            
+            paymentMethods.forEach(method => {
+                observer.observe(method);
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Create default admin user if not exists
+            if (!users.some(u => u.email === adminEmail)) {
+                users.push({
+                    name: 'অ্যাডমিন',
+                    email: adminEmail,
+                    password: 'admin123',
+                    isAdmin: true,
+                    joinDate: new Date().toLocaleDateString('bn-BD')
+                });
+                localStorage.setItem('users', JSON.stringify(users));
+            }
+        };
+        
+        // Show login modal
+        function showLoginModal() {
+            document.getElementById('login-modal').style.display = 'flex';
+        }
+        
+        // Close login modal
+        function closeLoginModal() {
+            document.getElementById('login-modal').style.display = 'none';
+        }
+        
+        // Login function
+        function login() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
+            if (!email || !password) {
+                alert('ইমেইল এবং পাসওয়ার্ড প্রয়োজন');
+                return;
+            }
+            
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                currentUser = user;
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                updateUIAfterLogin();
+                closeLoginModal();
+                alert('সফলভাবে লগইন করেছেন!');
+            } else {
+                alert('ভুল ইমেইল বা পাসওয়ার্ড');
+            }
+        }
+        
+        // Register function
+        function register() {
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-confirm-password').value;
+            
+            if (!name || !email || !password || !confirmPassword) {
+                alert('সব ফিল্ড পূরণ করুন');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                alert('পাসওয়ার্ড মিলেনি');
+                return;
+            }
+            
+            if (users.some(u => u.email === email)) {
+                alert('এই ইমেইলটি already ব্যবহৃত হয়েছে');
+                return;
+            }
+            
+            const newUser = {
+                name,
+                email,
+                password,
+                isAdmin: email === adminEmail,
+                joinDate: new Date().toLocaleDateString('bn-BD')
+            };
+            
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            currentUser = newUser;
+            localStorage.setItem('currentUser', JSON.stringify(newUser));
+            
+            updateUIAfterLogin();
+            closeLoginModal();
+            alert('সফলভাবে রেজিস্টার完成了!');
+        }
+        
+        // Logout function
+        function logout() {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            
+            document.getElementById('login-btn').style.display = 'inline-block';
+            document.getElementById('logout-btn').style.display = 'none';
+            document.getElementById('user-panel').style.display = 'none';
+            document.getElementById('admin-panel').style.display = 'none';
+            
+            alert('সফলভাবে লগআউট完成了!');
+        }
+        
+        // Update UI after login
+        function updateUIAfterLogin() {
+            document.getElementById('login-btn').style.display = 'none';
+            document.getElementById('logout-btn').style.display = 'inline-block';
+            
+            if (currentUser.isAdmin) {
+                document.getElementById('admin-panel').style.display = 'block';
+            }
+            
+            // Update user panel
+            document.getElementById('user-name').textContent = currentUser.name;
+            document.getElementById('user-email').textContent = currentUser.email;
+            document.getElementById('user-joined').textContent = 'জয়েন করার তারিখ: ' + currentUser.joinDate;
+            
+            document.getElementById('user-panel').style.display = 'block';
+        }
+        
+        // Show admin panel
+        function showAdminPanel() {
+            if (currentUser && currentUser.isAdmin) {
+                document.getElementById('admin-panel').style.display = 'block';
+                document.getElementById('admin-panel').scrollIntoView({behavior: "smooth"});
+            } else {
+                alert('শুধুমাত্র অ্যাডমিন এই প্যানেল access করতে পারেন');
+                showLoginModal();
+            }
+        }
+        
+        // Show user panel
+        function showUserPanel() {
+            if (currentUser) {
+                document.getElementById('user-panel').style.display = 'block';
+                document.getElementById('user-panel').scrollIntoView({behavior: "smooth"});
+            } else {
+                alert('দয়া করে প্রথমে লগইন করুন');
+                showLoginModal();
+            }
+        }
+    </script>
+</body>
+</html>
